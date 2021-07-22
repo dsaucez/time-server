@@ -1,11 +1,11 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+import express, { json } from 'express';
+import { v4 as uuidv4 } from 'uuid';
 
 const PORT = 3000;
-const pid = process.pid;
+const pid = uuidv4();
 const app = express();
 
-app.use(bodyParser.json());
+app.use(json());
 
 app.get('/time', (req,res) => { res.send({time: new Date(), id: pid}) });
 
