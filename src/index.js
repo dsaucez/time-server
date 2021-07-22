@@ -8,4 +8,4 @@ app.use(bodyParser.json());
 
 app.get('/time', (req,res) => { res.send({time: new Date()}) });
 
-app.listen(PORT, ()=> {console.log('listening on port '+PORT)});
+app.listen(PORT, ()=> {console.log('Time server is listening on port '+ PORT)});
